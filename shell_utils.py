@@ -1,3 +1,4 @@
+# Function to print the progress status at same location in the terminal
 import sys
 import time
 
