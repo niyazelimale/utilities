@@ -11,3 +11,14 @@ def update_counter_progress(total):
 
 if __name__ == “__main__”:
   update_counter_progress(10)
+
+
+#Function to split a string to fixed "n" number of fields.
+#If fields are less than "n", then remaining fields wil be empty. If fields are more, those will be chopped off.
+def split_to_n_fields(line, n, delimiter=','):
+  fields = line.split(delimiter)
+  #Pad with empty strings if less than n fields
+  fields += [''] * (n - len(fields))
+  #Truncate if more than n fields
+  return fields[:n]
+
